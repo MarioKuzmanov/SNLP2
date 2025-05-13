@@ -1,0 +1,48 @@
+exercise 1
+z = np.arange(10, 100, 5)
+print(z)
+
+exercise 2
+print(y)
+print(y[[0, 0, 3, 3], [0, 3, 0, 3]])
+
+exercise 3
+print(x[x.sum(axis=-1) <= 2 ])
+
+exercise 4
+print(x[x.sum(-1) % 2 == 0])
+
+exercise 5
+a[0, :] = 1
+print(a)
+
+
+exercise 6
+matrix = x[3 : , 3:]
+matrix[matrix % 2 == 0] = 1
+
+print(matrix)
+
+
+exercise 7
+print(a.reshape(4, 4)[1, :])
+
+exercise 8
+first_batch = x.reshape(4, 2, 6)[0, : , :]
+
+print(first_batch.shape)
+
+print(first_batch.flatten()) 
+
+exercise 9
+print(a[0, : , : ].shape, b[0, : ,: ].shape)
+
+print(np.dot(a[0, : , : ], b[0, : ,: ]))
+
+exercise 10
+v1 = a[1, : , 1]
+v2 =  b[0, 0, : ]
+
+print(v1.shape, v2.shape)
+
+print(np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2)))
