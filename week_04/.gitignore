@@ -1,0 +1,6 @@
+best-model.pt
+best-model-bin.pt
+GoogleNewsvectorsnegative300.bin
+.idea
+__pycache__
+pos_tagging

@@ -1,0 +1,25 @@
+Sorry for slow response. I had some indecision between a
+low-level introduction (e.g., explaining autograd through a
+simple computation graph), and a rather high-level one (an
+example nn implementation).
+
+I think my current inclination is towards a high-level tutorial:
+going through a toy example with a simple feed forward neural
+network implementation using high-level pytorch utilities/layers.
+At this point, it would be early to go for any complex
+architectures (like RNNs or Transformers), and I think most
+people would get lost if go in to the detail. We better keep it
+simple and practical.
+
+For the example problem, you can either create a synthetic
+dataset, or maybe again use embeddings and do some simple
+classification of words (e.g., nouns vs. verbs, sentiment class
+from a sentiment dictionary, or whether the word is a compound or
+not ;). Showing first a binary classification, and then extending
+it to multi-class classification (maybe as an exercise) may be
+also nice.
+
+So, my suggestion is simply going through (only) a simple feed
+forward example, but making sure that people really (are able to)
+do it. So, give them time to work along, or maybe add exercises
+with a slight variation.
