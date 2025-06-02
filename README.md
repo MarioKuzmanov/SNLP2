@@ -1,5 +1,7 @@
 # SNLP2
-tutorials from SNLP2 SS25 @UniTübingen
+this repository contains the official tutorials from SNLP2 SS25 @UniTübingen, also additional notes and experiments.
 
-### Note
-the empty folders either contain graded assignments or explanation about graded assignments for BA and MA students in CL. 
+### N.B.
+- the empty folders either contain graded assignments or explanation about graded assignments for BA and MA students in CL. 
+- in each folder, the official presented solutions are named either tutorial_**xx** where **xx** refers to the week number or a**x**-<method>.py 
+where **x** refers to the assignment number and <method> refers to the solution.
