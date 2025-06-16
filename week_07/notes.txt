@@ -1,0 +1,50 @@
+Hi everyone,
+
+Much, much later than planned but I pushed assignment 3 and
+assignment 4 templates to GitHub. I haven't set up the GitHub
+classroom and the scoreboards yet. Also, I did not include
+baselines for these.
+
+I will set up scoreboards for all assignments today or tomorrow,
+and let you know. I will also share my baselines for these two
+later. But in case you have time and interest it may also be
+interesting if you can go for your own implementations.
+
+I was planning an assignment 5 about language modeling. However,
+I had difficulties setting up the testing. To follow the
+fair/hidden testing we do for other assignments, we'd need to run
+submitted code, which makes things much more complicated - based
+on previous experience.
+
+My current inclination is to drop the fifth assignment, and maybe
+provide it as the graded project.
+
+Now, probably most important and urgent question: what to do on
+Monday?
+
+If you think it is feasible at this point, what I'd suggest is:
+
+- Introduce the assignments & and have a free Q&A session. From
+  the coverage so far, people should be able to use RNNs for both
+  tasks, but assignment 4 would probably work better in a few
+  weeks, when we discuss the encoder-decoder models in more
+  detail.
+
+If the above is too short, what I'd be interested in is a short
+tutorial on using RNNs (GRU or LSTM) for classification. I'd use
+your sentiment analysis tutorial (tutorial 4), but use an RNN
+instead of a FFN. One more (before we can do OpenNMT) suggestion
+is to use an RNN for sequence labeling. Maybe you could pick up a
+simplified version of an NER task (maybe something Mario worked
+on before) and we could repeat the same with pretrained
+Transformers later.
+
+If the above does not look feasible, we can also cancel the lab
+session on Monday. In any case, if you'd like to discuss
+anything, I have time between 11:00 and 13:00 on Monday, or just
+before the lab session.
+
+Sorry for slow action on these.
+
+Best,
+Cagri
