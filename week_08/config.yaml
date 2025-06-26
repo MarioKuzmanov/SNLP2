@@ -1,0 +1,67 @@
+# 1. Build vocab
+# - onmt_build_vocab -config config.yaml -n_sample -1
+# default tokenizer in onmt tokenizes by space
+# to run, you will need to have at least defined the data files and where to save the vocab files in your config.yaml
+# after building the vocab, you can directly train your models (and then translate)
+
+# 2. Train Model
+# -onmt_train -config config.yaml
+
+# 3. Make Predictions
+# onmt_translate -model path/to/model -src path/to/test.src -output path/to/pred.tgt -gpu 0 -verbose
+
+# DATA FILES
+data:
+  corpus1:
+    path_src: data-opennmt/train/slk_large.train.src
+    path_tgt: data-opennmt/train/slk_large.train.tgt
+  valid:
+    path_src: data-opennmt/dev/slk.dev.src
+    path_tgt: data-opennmt/dev/slk.dev.tgt
+
+# VOCAB FILES
+src_vocab: data-opennmt/vocab/slk.vocab
+tgt_vocab: data-opennmt/vocab/slk.vocab
+share_vocab: True
+
+# ENCODER-DECODER ARCHITECTURE
+encoder_type: brnn
+decoder_type: rnn
+rnn_type: LSTM
+
+
+enc_layers: 2
+dec_layers: 2
+
+enc_rnn_size: 512
+dec_rnn_size: 512
+
+
+# OPTIMIZER, LR, WARMUP (optional)
+optim: adam
+learning_rate: 5e-3
+warmup_steps: 100
+
+# BATCH SIZES
+batch_size: 64
+valid_batch_size: 64
+
+# TRAIN AND VALIDATION
+# epoch = ~110 steps
+train_steps: 3300
+valid_steps: 550
+valid_metrics: [ ppl, accuracy ]
+
+# WITH EARLY STOPPING
+early_stopping: 4
+early_stopping_criteria: [ ppl, accuracy ]
+
+# SAVE
+save_checkpoint_steps: 3300
+
+save_best_model: True
+save_model: models/2-bi-lstm-bigger
+
+# with GPU (recommended)
+world_size: 1
+gpu_ranks: [ 0 ]

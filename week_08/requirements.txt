@@ -1,0 +1,6 @@
+OpenNMT-py==2.2.0
+torch==2.5.1
+torchvision
+torchaudio
+evaluate==0.4.4
+sacrebleu
