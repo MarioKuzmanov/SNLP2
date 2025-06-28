@@ -24,6 +24,7 @@ src_vocab: data-opennmt/vocab/slk.vocab
 tgt_vocab: data-opennmt/vocab/slk.vocab
 share_vocab: True
 
+
 # ENCODER-DECODER ARCHITECTURE
 encoder_type: brnn
 decoder_type: rnn
@@ -36,10 +37,17 @@ dec_layers: 2
 enc_rnn_size: 512
 dec_rnn_size: 512
 
+dropout: 0.3
+bridge: true
+
 
 # OPTIMIZER, LR, WARMUP (optional)
 optim: adam
-learning_rate: 5e-3
+learning_rate: 2e-3
+learning_rate_decay: 0.7
+start_decay_steps: 1000
+decay_steps: 500
+label_smoothing: 0.1
 warmup_steps: 100
 
 # BATCH SIZES
@@ -60,7 +68,7 @@ early_stopping_criteria: [ ppl, accuracy ]
 save_checkpoint_steps: 3300
 
 save_best_model: True
-save_model: models/2-bi-lstm-bigger
+save_model: models/2-bi-lstm-extra-bigger
 
 # with GPU (recommended)
 world_size: 1
